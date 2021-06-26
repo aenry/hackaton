@@ -5,4 +5,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('empresadata/', empresadata, name='empresadata'),
     path('agregarproducto/', agregarproducto, name='agregarproducto'),
+    path('seleccionarcampana/', seleccionarcampana, name='seleccionarcampana'),
+    path('registrocliente/', registrocliente, name='registrocliente'),
 ]
