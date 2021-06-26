@@ -1,6 +1,7 @@
 {% extends 'peoplemarket/base.html' %}
 {% block contenido %}
 
+
 <form action="POST" class="d-flex flex-column">
     <label for="">Nombre de la Empresa</label>
     <input type="text">
@@ -9,7 +10,7 @@
     <label for="logo">Logo de la Empresa</label>
     <input type="file">
     <label></label>
-    <a class="btn btn-primary" href="#" role=button >Crear Logo</a>
+    <a class="btn btn-info" href="/" role=button >Crear Logo</a>
     <label for="">Region</label>
     <select name="" id="">
         <option value="">Region 1</option>
@@ -33,7 +34,7 @@
         <option value="">Comuna 3</option>
     </select>
 
-    <button type="submit">Avanzar</button>
+    <button class="btn btn-primary" type="submit">Avanzar</button>
 </form>
 
 {% endblock contenido %}
