@@ -27,3 +27,21 @@ class admProducto(admin.ModelAdmin):
     class Meta:
         model=Producto
 admin.site.register(Producto,admProducto)
+
+class admComuna(admin.ModelAdmin):
+    list_display = ['nombre', 'region']
+    class Meta:
+        model=Comuna
+admin.site.register(Comuna,admComuna)
+
+class admRegion(admin.ModelAdmin):
+    list_display = ['nombre',]
+    class Meta:
+        model=Region
+admin.site.register(Region,admRegion)
+
+class admTiendaTemp(admin.ModelAdmin):
+    list_display = ['rut', 'nombre', 'direccion', 'rubro']
+    class Meta:
+        model=TiendaTemp
+admin.site.register(TiendaTemp,admTiendaTemp)

@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'livereload',
     'django.contrib.staticfiles',
-    'peoplemarket'
+    'peoplemarket',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

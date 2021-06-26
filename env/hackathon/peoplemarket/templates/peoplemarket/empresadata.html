@@ -1,7 +1,19 @@
 {% extends 'peoplemarket/base.html' %}
+{% load crispy_forms_tags %}
 {% block contenido %}
 
+<div class="container-fluid">
+<form action="" method="POST" class="d-flex flex-column" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{formulario|crispy}}
+    {% if formulario %}
+    <br>
+        <input type="submit" value="Avanzar" class="btn btn-primary">
+    {% endif %}
+    
+</form>
 
+<<<<<<< HEAD
 <form action="{% url 'agregarproducto'  %}" class="d-flex flex-column">
     <label for="">Nombre de la Empresa</label>
     <input type="text">
@@ -33,8 +45,9 @@
         <option value="">Comuna 2</option>
         <option value="">Comuna 3</option>
     </select>
+=======
+</div>
+>>>>>>> 1f6a448014910d009fc2ac1861f43312e2bac318
 
-    <button class="btn btn-primary" type="submit">Avanzar</button>
-</form>
 
 {% endblock contenido %}
