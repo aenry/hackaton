@@ -2,7 +2,7 @@
 {% block contenido %}
 
 
-<form action="POST" class="d-flex flex-column">
+<form action="{% url 'agregarproducto'  %}" class="d-flex flex-column">
     <label for="">Nombre de la Empresa</label>
     <input type="text">
     <label for="rubro">Rubro de la Empresa</label>
