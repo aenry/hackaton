@@ -22,3 +22,7 @@ def empresadata(request):
 def agregarproducto(request):
     return render(request, 'peoplemarket/agregarproducto.html')
 
+def seleccionarcampana(request):
+    return render(request, 'peoplemarket/seleccionarcampana.html')
+def registrocliente(request):
+    return render(request, 'peoplemarket/registrocliente.html')
