@@ -39,3 +39,9 @@ class admRegion(admin.ModelAdmin):
     class Meta:
         model=Region
 admin.site.register(Region,admRegion)
+
+class admTiendaTemp(admin.ModelAdmin):
+    list_display = ['rut', 'nombre', 'direccion', 'rubro']
+    class Meta:
+        model=TiendaTemp
+admin.site.register(TiendaTemp,admTiendaTemp)

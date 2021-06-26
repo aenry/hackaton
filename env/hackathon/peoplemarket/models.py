@@ -31,7 +31,6 @@ class Tienda(models.Model):
     nombre = models.CharField(max_length=25)
     direccion = models.CharField(max_length=25)
     comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
-    logo = models.CharField(max_length=255)
     rubro = models.ForeignKey(Rubro, on_delete=models.CASCADE)
     def __str__(self):
         return str(self.nombre)
@@ -43,5 +42,14 @@ class Producto(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     precio = models.PositiveIntegerField()
     stock = models.PositiveIntegerField()
+    def __str__(self):
+        return str(self.nombre)
+
+class TiendaTemp(models.Model):
+    rut = models.CharField(max_length=9, primary_key=True)
+    nombre = models.CharField(max_length=25)
+    direccion = models.CharField(max_length=25)
+    comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
+    rubro = models.ForeignKey(Rubro, on_delete=models.CASCADE)
     def __str__(self):
         return str(self.nombre)
